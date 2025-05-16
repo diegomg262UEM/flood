@@ -4,8 +4,8 @@ import torch.nn.functional as F
 import PIL
 import os
 
-import matplotlib as pyplot
-import torch.optim.lr_scheduler as StepLR
+from matplotlib import pyplot
+from torch.optim.lr_scheduler import StepLR
 
 #C1
 #JJJJ
@@ -226,6 +226,7 @@ if __name__ == '__main__':
     
 
 
+#Macarena
     #Diefooooo
     pyplot.clf()
     pyplot.plot(loss_list)
