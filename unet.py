@@ -211,12 +211,13 @@ if __name__ == '__main__':
         jaccard_list.append(sum(jaccard_epoch)/len(jaccard_epoch))
         loss_list.append(running_loss)
 
-        print('[Test #{}] IOU: {:.4f} Loss: {:.4f}'.format(epoch, jaccard_list, loss_list))
+        print('IOU: {:.4f} Loss: {:.4f}'.format(jaccard_list, loss_list))
 
     pyplot.clf()
     pyplot.plot(jaccard_list)
     pyplot.legend()
     pyplot.title("IOU")
+    pyplot.savefig("IOU.jpg", format='jpg')
     pyplot.show()
     
 
@@ -226,6 +227,7 @@ if __name__ == '__main__':
     pyplot.plot(loss_list)
     pyplot.legend()
     pyplot.title("Loss")
+    pyplot.savefig("Loss.jpg", format='jpg')
     pyplot.show()
 
   
