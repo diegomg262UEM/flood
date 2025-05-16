@@ -1,11 +1,11 @@
-import numpy
-import os
-import PIL
-from matplotlib import pyplot
 import torch
 import torchvision
-from torchvision import transforms, datasets
-import time
+import torch.nn.Functional as F
+import PIL
+import os
+
+import matplotlib as pyplot
+import torch.optim.lr_shceduler as StepLR
 #JJJJ
 
 class DoubleConv(torch.nn.Module):
