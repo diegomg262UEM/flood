@@ -211,7 +211,7 @@ if __name__ == '__main__':
         jaccard_list.append(sum(jaccard_epoch)/len(jaccard_epoch))
         loss_list.append(running_loss)
 
-        print('IOU: {:.4f} Loss: {:.4f}'.format(jaccard_list, loss_list))
+        print('IOU: {:.4f} Loss: {:.4f}'.format(jaccard_epoch, running_loss))
 
     pyplot.clf()
     pyplot.plot(jaccard_list)
