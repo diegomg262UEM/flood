@@ -187,6 +187,9 @@ if __name__ == '__main__':
         running_loss = 0.
         unet.train()
 
+
+        #ghg
+
         jaccard_epoch = list()
         for image, target in zip(dataloader_train_image, dataloader_train_target):
 
@@ -212,7 +215,7 @@ if __name__ == '__main__':
         jaccard_list.append(sum(jaccard_epoch)/len(jaccard_epoch))
         loss_list.append(running_loss)
 
-        print('IOU: {:.4f} Loss: {:.4f}'.format(torch.mean(intersection).detach(), running_loss))
+        
 
     pyplot.clf()
     pyplot.plot(jaccard_list)
