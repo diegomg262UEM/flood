@@ -183,6 +183,7 @@ if __name__ == '__main__':
     loss_list = list()
     jaccard_list = list()
     for epoch in range(10):
+        print("Epoch {} running".format(epoch))
         running_loss = 0.
         unet.train()
 
@@ -211,7 +212,7 @@ if __name__ == '__main__':
         jaccard_list.append(sum(jaccard_epoch)/len(jaccard_epoch))
         loss_list.append(running_loss)
 
-        print('IOU: {:.4f} Loss: {:.4f}'.format(jaccard_epoch, running_loss))
+        print('IOU: {:.4f} Loss: {:.4f}'.format(torch.mean(intersection).detach(), running_loss))
 
     pyplot.clf()
     pyplot.plot(jaccard_list)
