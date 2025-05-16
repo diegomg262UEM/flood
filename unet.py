@@ -1,3 +1,13 @@
+import numpy
+import os
+import PIL
+from matplotlib import pyplot
+import torch
+import torchvision
+from torchvision import transforms, datasets
+import time
+#JJJJ
+
 class DoubleConv(torch.nn.Module):
     """(convolution => [BN] => ReLU) * 2"""
 
@@ -117,14 +127,7 @@ class OutConv(torch.nn.Module):
     def forward(self, x):
         return self.conv(x)
 
-import numpy
-import os
-import PIL
-from matplotlib import pyplot
-import torch
-import torchvision
-from torchvision import transforms, datasets
-import time
+
 
 if __name__ == '__main__':
     images = os.listdir('./data_flood/data/Image/')
